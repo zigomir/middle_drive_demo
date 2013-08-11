@@ -1,0 +1,11 @@
+---
+blog:
+- title: Blog post title 1
+  content: <div>Blog post content 1</div>
+  date: 1. 1. 2010
+- title: Blog post title 2
+  content: <div>Blog post content 2</div>
+  date: 1. 2. 2010
+- title: AWYEA!
+  content: <div>Blog post content 3</div>
+  date: 1. 3. 2010
