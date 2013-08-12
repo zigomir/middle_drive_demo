@@ -76,6 +76,7 @@ activate :i18n, :path => ''
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
+set :markdown_engine, :redcarpet
 
 # Build-specific configuration
 configure :build do

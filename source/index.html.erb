@@ -1,10 +1,16 @@
 ---
 title: Welcome to Middleman
 ---
+<div>
+  <ul>
+    <% data.technologies.technologies.each do |f| %>
+      <li><%= f %></li>
+    <% end %>
+  </ul>
+</div>
 
-<div class="welcome">
-  <h1>Middleman is Watching yes!</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+<section class="article">
+  <h3><%= data.article.article.title %></h3>
+  <%= data.article.article.content %>
+  <%= image_tag data.article.article.image %>
+</section>
