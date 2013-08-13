@@ -1,4 +1,11 @@
+# TODO create this yaml from data files structure
 ---
 pages:
-  home: main
-  about: main
+  en:
+    index: index
+    blog: blog
+    article: main
+  sl:
+    index: index
+    blog: blog
+    article: main

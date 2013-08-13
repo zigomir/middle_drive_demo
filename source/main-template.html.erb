@@ -1,6 +1,7 @@
-<h1>Main template</h1>
+main template
 
-<h2>Page name: <%= page_name %></h2>
-<div><%= trans(page_name, 'title', locale) %></div>
-
-<%= image_tag 'nutella.jpg' %>
+<section class="article">
+  <h3><%= data.send("article_#{locale}").article.title %></h3>
+  <%= data.send("article_#{locale}").article.content %>
+  <%= image_tag data.send("article_#{locale}").article.image %>
+</section>

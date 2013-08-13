@@ -1,0 +1,9 @@
+blog template
+
+# TODO create helpers for iterators
+
+<% data.send("blog_#{locale}").blog.each do |blog_post| %>
+  <h2><%= blog_post.title %></h2>
+  <%= blog_post.content %>
+  <span><%= blog_post.date %></span>
+<% end %>
