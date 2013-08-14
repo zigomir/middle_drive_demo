@@ -1,5 +1,7 @@
 ---
 en:
+  index:
+    title: Middleman
   home:
     title: Middleman
   about:

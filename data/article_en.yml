@@ -1,5 +1,5 @@
 ---
-article:
+main:
   title: Blog post title
   content: |
     <p>Simple table</p>

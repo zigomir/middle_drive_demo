@@ -1,7 +1,7 @@
 main template
 
 <section class="article">
-  <h3><%= data.send("article_#{locale}").article.title %></h3>
-  <%= data.send("article_#{locale}").article.content %>
-  <%= image_tag data.send("article_#{locale}").article.image %>
+  <h3><%= data.send("article_#{locale}").main.title %></h3>
+  <%= data.send("article_#{locale}").main.content %>
+  <%= image_tag data.send("article_#{locale}").main.image %>
 </section>
