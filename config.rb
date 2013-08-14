@@ -19,12 +19,16 @@ PAGES['pages'].each do |page|
 
     path = page_name == 'index' ? locale : "#{locale}/#{page_name}"
     proxy path, "#{template_name}-template.html",
-          :locals => { :page_name => page_name, :locale => locale },
+          :locals => { :page_name => page_name,
+                       :template_name => template_name,
+                       :locale => locale },
           :ignore => true
 
     # for each page create default language without locale in url
     proxy page_name, "#{template_name}-template.html",
-        :locals => { :page_name => page_name, :locale => DEFAULT_LANGUAGE },
+        :locals => { :page_name => page_name,
+                     :template_name => template_name,
+                     :locale => DEFAULT_LANGUAGE },
         :ignore => true
   end
 end
@@ -36,6 +40,14 @@ end
 helpers do
   def trans(page_name, key, locale)
     I18n.t("#{page_name}.#{key}", locale: locale)
+  end
+
+  # get data from local variables
+  def d(locals)
+    page_name     = locals[:page_name]
+    locale        = locals[:locale]
+    template_name = locals[:template_name]
+    data.send("#{page_name}_#{locale}").send("#{template_name}")
   end
 end
 
